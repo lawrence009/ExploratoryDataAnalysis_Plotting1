@@ -5,5 +5,5 @@ hist(household_power_consumption$Global_active_power,
      main = "Global Active Power",
      col  = "red")
 
-dev.copy(png, file = "Plot1.png")
+dev.copy(png, file = "plot1.png", width = 480, height = 480) #default is 480px x 480px 
 dev.off()
