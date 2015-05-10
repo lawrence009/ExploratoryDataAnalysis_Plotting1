@@ -1,4 +1,6 @@
-#source("load.R")
+if (!exists('household_power_consumption')) {
+    source("load.R")
+}
 
 hist(household_power_consumption$Global_active_power,
      xlab = "Global Active Power (kilowatts)",

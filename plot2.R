@@ -1,4 +1,6 @@
-#source("load.R")
+if (!exists('household_power_consumption')) {
+    source("load.R")
+}
 
 plot(household_power_consumption$Time,
      household_power_consumption$Global_active_power,

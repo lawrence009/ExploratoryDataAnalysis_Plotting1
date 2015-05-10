@@ -1,4 +1,6 @@
-#source("load.R")
+if (!exists('household_power_consumption')) {
+    source("load.R")
+}
 
 with(household_power_consumption,
      plot(Time, Sub_metering_1,

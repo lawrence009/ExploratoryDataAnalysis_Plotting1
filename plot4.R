@@ -1,4 +1,6 @@
-#source("load.R")
+if (!exists('household_power_consumption')) {
+    source("load.R")
+}
 
 par(mfcol = c(2, 2), cex = 0.7)
 
