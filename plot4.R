@@ -2,7 +2,10 @@ if (!exists('household_power_consumption')) {
     source("load.R")
 }
 
-par(mfcol = c(2, 2), cex = 0.7)
+
+png("plot4.png", width=480, height=480)
+
+par(mfcol = c(2, 2))
 
 #plot 1
 plot(household_power_consumption$Time,
@@ -29,7 +32,6 @@ with(household_power_consumption,
 
 legend("topright",
        bty    = "n",
-       cex    = 0.7,
        col    = c("black", "red", "blue"),
        lty    = c(1, 1, 1), # gives the legend approriate line symbols
        legend = colnames(household_power_consumption[7:9]))
@@ -49,5 +51,4 @@ with(household_power_consumption,
           type = "l",
           xlab = "datetime"))
 
-dev.copy(png, file = "plot4.png", width = 800, height = 800) #default is 480px x 480px
 dev.off()

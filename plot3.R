@@ -2,6 +2,8 @@ if (!exists('household_power_consumption')) {
     source("load.R")
 }
 
+png("plot3.png", width=480, height=480)
+
 with(household_power_consumption,
      plot(Time, Sub_metering_1,
           type = "l",
@@ -21,5 +23,4 @@ legend("topright",
        lty    = c(1, 1, 1), # gives the legend approriate line symbols
        legend = colnames(household_power_consumption[7:9]))
 
-dev.copy(png, file = "plot3.png", width = 800, height = 800) #default is 480px x 480px
 dev.off()
