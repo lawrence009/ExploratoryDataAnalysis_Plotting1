@@ -21,5 +21,5 @@ legend("topright",
        lty    = c(1, 1, 1), # gives the legend approriate line symbols
        legend = colnames(household_power_consumption[7:9]))
 
-dev.copy(png, file = "plot3.png", width = 480, height = 480) #default is 480px x 480px
+dev.copy(png, file = "plot3.png", width = 800, height = 800) #default is 480px x 480px
 dev.off()
