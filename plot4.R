@@ -28,6 +28,8 @@ with(household_power_consumption,
            col = "blue"))
 
 legend("topright",
+       bty    = "n",
+       cex    = 0.7,
        col    = c("black", "red", "blue"),
        lty    = c(1, 1, 1), # gives the legend approriate line symbols
        legend = colnames(household_power_consumption[7:9]))
@@ -44,7 +46,8 @@ with(household_power_consumption,
 #plot 4
 with(household_power_consumption,
      plot(Time, Global_reactive_power,
-          type = "l"))
+          type = "l",
+          xlab = "datetime"))
 
-dev.copy(png, file = "plot4.png", width = 480, height = 480) #default is 480px x 480px
+dev.copy(png, file = "plot4.png", width = 800, height = 800) #default is 480px x 480px
 dev.off()
